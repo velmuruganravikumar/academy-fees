@@ -1,0 +1,53 @@
+{% include 'navbar.html' %}
+{% block content %}
+
+<div class="sections payment">
+    {% include 'message.html' %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <div class="card py-4">
+                    <div class="card-body">
+                <h3 class="h3 title text-center">Payment</h3><hr>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group row p-3">
+                        <div class="col-3">
+                        <label for="stdid">Student ID</label>
+                        </div>
+                        <div class="col-6">
+                        <select class="form-select" name="std_id">
+                            <option selected disabled>Select..</option>
+                            {% for i in drop %}
+                            <option value="{{i.id}}">{{i.stdid}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    </div>
+                    <div class="form-group row p-3">
+                        <div class="col-3">
+                        <label for="payamt">Payment Amount</label>
+                        </div>
+                        <div class="col-6">
+                        <input type="text" class="form-control" id="payamt" name="payamt">
+                        </div>
+                    </div>
+                    <div class="form-group row p-3">
+                        <div class="col-3">
+                        <label for="payamt">Paid Date</label>
+                        </div>
+                        <div class="col-6">
+                        <input type="date" class="form-control" id="paydate" name="paydate">
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <input type="submit" value="submit" class="btn btn-success col-6">
+                    </div>
+                </form>
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

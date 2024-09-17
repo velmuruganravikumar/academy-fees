@@ -1,0 +1,48 @@
+{% include 'navbar.html' %}
+{% block content %}
+<div class="sections">
+<div class="container">
+    <div class="row justify-content-center">
+        <h3 class="h3 title">Student Details</h3>
+        <div class="col-12 mt-3">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>College Name</th>
+                        <th>Type</th>
+                        <th>Course</th>
+                        <th>Fees</th>
+                        <th>Paid</th>
+                        <th>Pending</th>
+                    </tr>
+                </thead>
+                {% for i in detail %}
+                <tbody>
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{i.stdid}}</td>
+                        <td>{{i.name}}</td>
+                        <td>{{i.contact}}</td>
+                        <td>{{i.email}}</td>
+                        <td>{{i.college}}</td>
+                        <td>{{i.student_type}}</td>
+                        <td>{{i.courses}}</td>
+                        <td>{{i.fees}}</td>
+                        {% with total=i.slot1|add:i.slot2|add:i.slot3 %}
+                        <td>{{total}}</td>
+                        {% endwith %}
+                        <td>{{i.pending}}</td>
+                    </tr>
+                </tbody>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

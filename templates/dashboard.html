@@ -1,0 +1,116 @@
+{% include 'navbar.html' %}
+<!--nav class="navbar w-75">
+    <form class="form-inline w-50 position-relative">
+        <input class="form-control" type="search" placeholder="search">
+        <i class="fa-solid fa-magnifying-glass position-absolute text-secondary"></i>
+    </form>
+</nav-->
+{% block content %}
+
+<div class="sections">
+    <h1 class="h3 title ms-4">Dashboard</h1>
+    <div class="container dashboard">
+        <div class="row">
+            <div class="col-12">
+                <div class="bg-transparent p-3">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="box">
+                                    <div class="card bg-gradient p-1">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <h2 class="h2 mt-1">{{totalstd}}</h2>
+                                                </div>
+                                                <div class="col-5">
+                                                    <i class="fa-solid fa-graduation-cap text-danger fa-3x align-end"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <h5>Total Students</h5>
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="box">
+                                    <div class="card bg-gradient p-1">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <h2 class="h2 mt-1">{{totalfee}}</h2>
+                                                </div>
+                                                <div class="col-5">
+                                                    <i class="fa-solid fa-sack-dollar fa-3x text-warning"></i>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <h5>Total Fees</h5>
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="box">
+                                    <div class="card bg-gradient p-1">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <h2 class="h2 mt-1">{{monthfee}}</h2>
+                                                </div>
+                                                <div class="col-5">
+                                                    <i class="fa-solid fa-coins fa-3x text-success"></i>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <h5>This Month Fees</h5>
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="box">
+                                    <div class="card bg-gradient">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <h2 class="h2 mt-1">{{pendingfee}}</h2>
+                                                </div>
+                                                <div class="col-5">
+                                                    <i class="fa-solid fa-dollar-sign fa-3x text-primary"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <h5>Pending Fees</h5>
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--div class="sections">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card bg-light shadow p-3">
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div-->
+
+{% endblock %}

@@ -1,0 +1,50 @@
+
+.sidebar{
+    position:fixed;
+    top:0px;
+    left:10px;
+    height:100vh;
+    z-index:10;
+    background-color:rgb(151, 39, 196);
+    border-radius:15px;
+
+}
+.sidebar .icon{
+    background-color:rgb(108, 12, 146);
+    border-radius:10px;
+}
+.sidebar ul li a{
+    font-weight:600;
+    font-size:18px;
+}
+.sections .title{
+    font-weight:700;
+}
+.list-down{
+    top:40px;
+    right:0;
+    width:220px;
+}
+.navbar{
+    position:fixed;
+    top:0px;
+    left:268px;
+    width:80%;
+    border-radius:10px;
+    
+}
+.sections{
+    margin-left:275px;
+    margin-top:100px;
+}
+.payment .card{
+    margin-top:50px;
+}
+.box{
+    width:96%;
+    margin:0 auto;
+    padding:10px;
+}
+.dashboard .card{
+    border-radius:15px;
+}
